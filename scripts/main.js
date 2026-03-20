@@ -1,11 +1,12 @@
-import { world, system, EquipmentSlot } from "@minecraft/server";
+import { world, system } from "@minecraft/server";
 
 system.runInterval(() => {
     for (const player of world.getAllPlayers()) {
-        const equippable = player.getComponent("minecraft:equippable");
-        if (!equippable) continue;
+        const inventory = player.getComponent("minecraft:inventory");
+        if (!inventory || !inventory.container) continue;
 
-        const mainhand = equippable.getEquipment(EquipmentSlot.Mainhand);
+        const selectedSlot = player.selectedSlotIndex;
+        const mainhand = inventory.container.getItem(selectedSlot);
 
         if (mainhand && mainhand.typeId === "custom:op_bowl") {
             player.addEffect("night_vision", 300, {
