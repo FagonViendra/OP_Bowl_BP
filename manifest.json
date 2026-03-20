@@ -4,15 +4,15 @@
         "description": "Behavior Pack cho OP Bowl - Bát siêu sát thương 100 dame + Night Vision",
         "name": "OP Bowl BP",
         "uuid": "1f2a34b5-6c7d-8e9f-0a1b-2c3d4e5f6a7b",
-        "version": [1, 1, 0],
-        "min_engine_version": [1, 20, 50]
+        "version": [1, 2, 0],
+        "min_engine_version": [1, 21, 0]
     },
     "modules": [
         {
             "description": "Behavior Pack Module",
             "type": "data",
             "uuid": "7b6a5f4e-3d2c-1b0a-9f8e-7d6c5b4a3f2e",
-            "version": [1, 1, 0]
+            "version": [1, 2, 0]
         },
         {
             "description": "Script Module cho hiệu ứng Night Vision",
@@ -30,8 +30,9 @@
         },
         {
             "module_name": "@minecraft/server",
-            "version": "1.17.0"
+            "version": "1.7.0"
         }
     ]
 }
+
 
